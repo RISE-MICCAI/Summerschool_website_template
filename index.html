@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MICCAI Summer School 2025</title>
+    <script src="js/navigation.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+    <link rel="stylesheet" href="css/main.css">
+
+</head>
+
+<body>
+    <header>
+        <div class="container header-content">
+            <img src="/api/placeholder/120/120" alt="MICCAI Summer School Logo" class="logo">
+            <div class="header-title">
+                <h1>MICCAI Summer School 2025</h1>
+                <p>Advancing Medical Image Computing and Computer Assisted Intervention</p>
+            </div>
+        </div>
+    </header>
+
+    <nav>
+        <div class="container nav-container">
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-links">
+                <li><a href="#programme">Programme</a></li>
+                <li><a href="#participants">Call for Participants</a></li>
+                <li><a href="#mentorship">Mentorship</a></li>
+                <li><a href="#challenge">Challenge</a></li>
+                <li><a href="#materials">Speaker Materials</a></li>
+                <li><a href="#hubs">Local Hubs</a></li>
+                <li><a href="pages/gallery.html">Gallery</a></li>
+                <li><a href="#organizers">Organizers</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Join the MICCAI Summer School 2025</h2>
+            <p>Expand your knowledge, connect with experts, and advance your career in medical imaging and intervention</p>
+            <div>
+                <a href="#participants" class="btn btn-primary">Register Now</a>
+                <a href="#programme" class="btn btn-secondary">View Programme</a>
+            </div>
+        </div>
+    </section>
+
+    <main class="container">
+        <section id="programme">
+            <div class="section-header">
+                <h2>Programme</h2>
+            </div>
+            <div class="programme-content">
+                <div class="day-schedule">
+                    <h3>Day 1: Introduction and Fundamentals</h3>
+                    <div class="schedule-item">
+                        <div class="schedule-time">09:00 - 10:30</div>
+                        <div class="schedule-details">
+                            <h4>Opening Ceremony & Introduction to MICCAI</h4>
+                            <p>Welcoming remarks and overview of the summer school program</p>
+                        </div>
+                    </div>
+                    <div class="schedule-item">
+                        <div class="schedule-time">10:45 - 12:15</div>
+                        <div class="schedule-details">
+                            <h4>Fundamentals of Medical Image Computing</h4>
+                            <p>Core concepts and recent advances in the field</p>
+                        </div>
+                    </div>
+                    <div class="schedule-item">
+                        <div class="schedule-time">13:30 - 15:00</div>
+                        <div class="schedule-details">
+                            <h4>Hands-on Session: Image Processing Techniques</h4>
+                            <p>Practical workshop on essential image processing methods</p>
+                        </div>
+                    </div>
+                    <div class="schedule-item">
+                        <div class="schedule-time">15:15 - 16:45</div>
+                        <div class="schedule-details">
+                            <h4>Deep Learning for Medical Imaging</h4>
+                            <p>Introduction to neural networks and deep learning applications</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="day-schedule">
+                    <h3>Day 2: Advanced Topics and Applications</h3>
+                    <div class="schedule-item">
+                        <div class="schedule-time">09:00 - 10:30</div>
+                        <div class="schedule-details">
+                            <h4>Computer-Assisted Interventions</h4>
+                            <p>Latest developments in surgical navigation and robotics</p>
+                        </div>
+                    </div>
+                    <div class="schedule-item">
+                        <div class="schedule-time">10:45 - 12:15</div>
+                        <div class="schedule-details">
+                            <h4>Hands-on Session: Deep Learning Models</h4>
+                            <p>Building and training models for medical image analysis</p>
+                        </div>
+                    </div>
+                    <div class="schedule-item">
+                        <div class="schedule-time">13:30 - 15:00</div>
+                        <div class="schedule-details">
+                            <h4>Medical Image Segmentation Challenge</h4>
+                            <p>Introduction to the challenge and team formation</p>
+                        </div>
+                    </div>
+                    <div class="schedule-item">
+                        <div class="schedule-time">15:15 - 16:45</div>
+                        <div class="schedule-details">
+                            <h4>Mentorship Session</h4>
+                            <p>Small group discussions with field experts</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="day-schedule">
+                    <h3>Day 3: Research and Future Directions</h3>
+                    <div class="schedule-item">
+                        <div class="schedule-time">09:00 - 10:30</div>
+                        <div class="schedule-details">
+                            <h4>Current Research Trends</h4>
+                            <p>Panel discussion on emerging research directions</p>
+                        </div>
+                    </div>
+                    <div class="schedule-item">
+                        <div class="schedule-time">10:45 - 12:15</div>
+                        <div class="schedule-details">
+                            <h4>Challenge Working Session</h4>
+                            <p>Teams work on challenge solutions with mentor support</p>
+                        </div>
+                    </div>
+                    <div class="schedule-item">
+                        <div class="schedule-time">13:30 - 15:00</div>
+                        <div class="schedule-details">
+                            <h4>Challenge Presentations</h4>
+                            <p>Teams present their solutions and receive feedback</p>
+                        </div>
+                    </div>
+                    <div class="schedule-item">
+                        <div class="schedule-time">15:15 - 16:45</div>
+                        <div class="schedule-details">
+                            <h4>Closing Ceremony & Networking</h4>
+                            <p>Awards, closing remarks, and networking session</p>
+                        </div>
+                    </div>
+                </div>
+
+                <p class="text-center"><em>Note: This is a preliminary programme and subject to changes.</em></p>
+            </div>
+        </section>
+
+        <section id="participants">
+            <div class="section-header">
+                <h2>Call for Participants</h2>
+            </div>
+            <div class="cta-box">
+                <h3>Join Us at MICCAI Summer School 2025</h3>
+                <p>We invite students, researchers, and professionals interested in medical image computing and computer-assisted interventions to apply. The summer school offers a unique opportunity to learn from leading experts in the field, participate in hands-on sessions, and network with peers from around the world.</p>
+                <p>Applications are open until [Application Deadline].</p>
+                <a href="https://forms.google.com/placeholder-registration-link" target="_blank" class="btn btn-primary">Register Now</a>
+            </div>
+        </section>
+
+        <section id="mentorship">
+            <div class="section-header">
+                <h2>Mentorship Programme</h2>
+            </div>
+            <div class="mentorship-content">
+                <div class="mentorship-details">
+                    <h3>About the Mentorship</h3>
+                    <p>Our mentorship program pairs early-career researchers with experienced professionals in the field of medical imaging and computer-assisted interventions. Mentors provide guidance, career advice, and research direction to help mentees navigate their academic and professional journeys.</p>
+                    <p>Benefits include:</p>
+                    <ul>
+                        <li>One-on-one guidance from experts in your specific area of interest</li>
+                        <li>Networking opportunities with leading researchers</li>
+                        <li>Research collaboration possibilities</li>
+                        <li>Career development advice</li>
+                    </ul>
+                </div>
+                <div class="mentorship-apply">
+                    <h3>Apply for Mentorship</h3>
+                    <p>We welcome applications from PhD students and early-career researchers who are looking for guidance in their research and career development.</p>
+                    <p>Mentorship matches will be made based on research interests and career goals.</p>
+                    <p>Applications are open until [Mentorship Application Deadline].</p>
+                    <a href="https://forms.google.com/placeholder-mentorship-application" target="_blank" class="btn btn-primary">Apply Now</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="challenge">
+            <div class="section-header">
+                <h2>Challenge</h2>
+            </div>
+            <div class="challenge-content">
+                <div class="challenge-details">
+                    <h3>MICCAI Summer School Challenge 2025</h3>
+                    <p>Participate in our exciting medical image analysis challenge! Teams will work on solving a real-world problem in medical imaging using state-of-the-art techniques. The challenge provides an opportunity to apply what you learn during the summer school and compete with peers from around the globe.</p>
+                    <p>Challenge details:</p>
+                    <ul>
+                        <li>Problem statement will be announced during the summer school</li>
+                        <li>Teams of 3-5 participants</li>
+                        <li>Access to datasets and computational resources</li>
+                        <li>Mentorship support throughout the challenge</li>
+                        <li>Prizes for top-performing teams</li>
+                    </ul>
+                </div>
+                <div class="challenge-cta">
+                    <h4>Ready to test your skills?</h4>
+                    <p>Challenge registration will open after participant selection.</p>
+                    <a href="#" class="btn btn-primary">Challenge Details Coming Soon</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="materials">
+            <div class="section-header">
+                <h2>Speaker Materials</h2>
+            </div>
+            <div class="materials-content">
+                <p class="text-center" style="grid-column: 1 / -1;">Speaker materials will be available here prior to the Summer School.</p>
+                
+                <!-- Placeholder for materials - will be populated before the event -->
+                <div class="material-card">
+                    <img src="/api/placeholder/300/150" alt="Lecture Materials">
+                    <div class="material-info">
+                        <h3>Introduction to Medical Imaging</h3>
+                        <p>By Prof. [Speaker Name]</p>
+                        <a href="#" class="btn btn-primary">Coming Soon</a>
+                    </div>
+                </div>
+                <div class="material-card">
+                    <img src="/api/placeholder/300/150" alt="Workshop Materials">
+                    <div class="material-info">
+                        <h3>Deep Learning Workshop</h3>
+                        <p>By Dr. [Speaker Name]</p>
+                        <a href="#" class="btn btn-primary">Coming Soon</a>
+                    </div>
+                </div>
+                <div class="material-card">
+                    <img src="/api/placeholder/300/150" alt="Tutorial Materials">
+                    <div class="material-info">
+                        <h3>Image Segmentation Tutorial</h3>
+                        <p>By Prof. [Speaker Name]</p>
+                        <a href="#" class="btn btn-primary">Coming Soon</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="hubs">
+            <div class="section-header">
+                <h2>Local Hubs</h2>
+            </div>
+            <div id="map"></div>
+            <div class="hubs-list">
+                <div class="hub-card">
+                    <h3>London Hub</h3>
+                    <p>Imperial College London</p>
+                    <p>South Kensington Campus</p>
+                    <p>London, UK</p>
+                    <div class="contact">
+                        <i class="fas fa-user"></i>
+                        <span>Contact: Dr. Jane Smith</span>
+                    </div>
+                    <div class="contact">
+                        <i class="fas fa-envelope"></i>
+                        <span>Email: london.hub@miccai.org</span>
+                    </div>
+                </div>
+                <div class="hub-card">
+                    <h3>Boston Hub</h3>
+                    <p>Harvard Medical School</p>
+                    <p>Longwood Medical Area</p>
+                    <p>Boston, USA</p>
+                    <div class="contact">
+                        <i class="fas fa-user"></i>
+                        <span>Contact: Prof. John Doe</span>
+                    </div>
+                    <div class="contact">
+                        <i class="fas fa-envelope"></i>
+                        <span>Email: boston.hub@miccai.org</span>
+                    </div>
+                </div>
+                <div class="hub-card">
+                    <h3>Tokyo Hub</h3>
+                    <p>University of Tokyo</p>
+                    <p>Hongo Campus</p>
+                    <p>Tokyo, Japan</p>
+                    <div class="contact">
+                        <i class="fas fa-user"></i>
+                        <span>Contact: Dr. Akira Tanaka</span>
+                    </div>
+                    <div class="contact">
+                        <i class="fas fa-envelope"></i>
+                        <span>Email: tokyo.hub@miccai.org</span>
+                    </div>
+                </div>
+                <div class="hub-card">
+                    <h3>Munich Hub</h3>
+                    <p>Technical University of Munich</p>
+                    <p>Main Campus</p>
+                    <p>Munich, Germany</p>
+                    <div class="contact">
+                        <i class="fas fa-user"></i>
+                        <span>Contact: Prof.
+                        </section>
+
+
+
+        <!-- Featured testimonials -->
+        <section id="testimonials">
+            <div class="section-header">
+                <h2>What Past Participants Say</h2>
+            </div>
+            <div class="testimonials-slider">
+                <div class="testimonial">
+                    <div class="testimonial-content">
+                        <p>"The MICCAI Summer School was a transformative experience that connected me with leaders in medical imaging. The workshops were incredibly practical and the mentorship I received continues to guide my research."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="images/testimonials/testimonial1.jpg" alt="Sarah Johnson">
+                        <div>
+                            <h3>Sarah Johnson</h3>
+                            <p>PhD Student, University of Cambridge</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial">
+                    <div class="testimonial-content">
+                        <p>"As an industry professional, I found the summer school invaluable for staying updated with cutting-edge research. The networking opportunities led to several collaborations that have been beneficial for our company."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="images/testimonials/testimonial2.jpg" alt="Michael Chen">
+                        <div>
+                            <h3>Michael Chen</h3>
+                            <p>Senior Engineer, Medical Imaging Corp.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3>MICCAI Summer School 2025</h3>
+                    <p>A premier educational event for medical image computing and computer-assisted intervention.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+  
+                <div class="footer-links">
+                    <h3>Resources</h3>
+                    <ul>
+                        <li><a href="#">MICCAI Society</a></li>
+                        <li><a href="#">Past Summer Schools</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 MICCAI Summer School. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/navigation.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>                            
