@@ -42,9 +42,7 @@ header .header-content {
 }
 
 header .logo {
-    width: 80px;
     height: 80px;
-    border-radius: 50%;
 }
 
 header .header-title h1 {
@@ -152,6 +150,15 @@ main {
     max-width: 1200px;
     margin: 2rem auto;
     padding: 0 1rem;
+}
+
+ul {
+    padding-left: 20px;
+    margin-top: 0;
+}
+
+li {
+margin-bottom: 0.5em;
 }
 
 section {
