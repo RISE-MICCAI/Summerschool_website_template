@@ -194,6 +194,16 @@ section {
     background-color: #fdfdfd;
 }
 
+.programme-content .break {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border: 1px solid var(--light-gray);
+    border-radius: var(--border-radius);
+    background-color: rgb(247, 140, 69)
+}
+
 .programme-content .schedule-time {
     font-weight: bold;
     color: var(--secondary-color);
@@ -206,6 +216,8 @@ section {
     font-size: 1.2rem;
     margin-bottom: 0.5rem;
 }
+
+
 
 /* Testimonials */
 .testimonials-slider {
