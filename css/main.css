@@ -201,7 +201,7 @@ section {
     padding: 1rem;
     border: 1px solid var(--light-gray);
     border-radius: var(--border-radius);
-    background-color: rgb(247, 140, 69)
+    background-color: rgba(247, 140, 69, 0.694)
 }
 
 .programme-content .schedule-time {
