@@ -13,6 +13,7 @@ const hubLocations = [
     { city: "Lahore", country: "Pakistan", lat: 31.5497, lng: 74.3436 },
     { city: "Khyber Pakhtunkhwa", country: "Pakistan", lat: 34.0151, lng: 71.5249 },
     { city: "Al-Seeb", country: "Oman", lat: 23.6740, lng: 58.1829 },
+    { city: "Hanoi", country: "Vietnam", lat: 21.0278, lng: 105.8342 },
     
     // Middle East
     { city: "Damascus", country: "Syria", lat: 33.5138, lng: 36.2765 },
