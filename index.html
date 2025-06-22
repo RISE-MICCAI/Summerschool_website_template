@@ -30,6 +30,7 @@
             </button>
             <ul class="nav-links">
                 <li><a href="#program">Schedule</a></li>
+                <li><a href="#hub-locations">Local Hubs</a></li>
                 <li><a href="#participants">Call for Participants</a></li>
                 <li><a href="#mentorship">Mentorship Program</a></li>
             <!--<li><a href="#challenge">Challenge</a></li>
@@ -55,6 +56,121 @@
         <section id="program">
         </section>
 
+        <section id="hub-locations">
+            <div class="section-header">
+                <h2>Local Hub Locations</h2>
+            </div>
+            <p style="text-align: center; margin-bottom: 2rem; font-size: 1.1rem; max-width: 800px; margin-left: auto; margin-right: auto;">
+                The RISE Summer School will be fully online. But, we have also a few local hubs that will display the summer school and organise some local activities. More details to follow! Hubs location and details below:
+            </p>
+            <div id="hub-map" style="height: 400px; margin: 2rem 0; border-radius: 8px; box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);"></div>
+            <div class="hub-locations">
+                <div class="continent-section">
+                    <h3>Africa</h3>
+                    <table class="hub-table">
+                        <thead>
+                            <tr>
+                                <th>Country</th>
+                                <th>City</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Egypt</td>
+                                <td>Cairo</td>
+                            </tr>
+                            <tr>
+                                <td>Nigeria</td>
+                                <td>Lagos</td>
+                            </tr>
+                            <tr>
+                                <td>South Africa</td>
+                                <td>Cape Town</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="continent-section">
+                    <h3>Americas</h3>
+                    <table class="hub-table">
+                        <thead>
+                            <tr>
+                                <th>Country</th>
+                                <th>City</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Guatemala</td>
+                                <td>Guatemala City</td>
+                            </tr>
+                            <tr>
+                                <td>Peru</td>
+                                <td>Lima</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="continent-section">
+                    <h3>Asia</h3>
+                    <table class="hub-table">
+                        <thead>
+                            <tr>
+                                <th>Country</th>
+                                <th>City</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Oman</td>
+                                <td>Al-Seeb</td>
+                            </tr>
+                            <tr>
+                                <td>Pakistan</td>
+                                <td>Lahore</td>
+                            </tr>
+                            <tr>
+                                <td>Pakistan</td>
+                                <td>Khyber Pakhtunkhwa</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="continent-section">
+                    <h3>Middle East</h3>
+                    <table class="hub-table">
+                        <thead>
+                            <tr>
+                                <th>Country</th>
+                                <th>City</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Jordan</td>
+                                <td>Amman</td>
+                            </tr>
+                            <tr>
+                                <td>Lebanon</td>
+                                <td>Beirut</td>
+                            </tr>
+                            <tr>
+                                <td>Palestine</td>
+                                <td>City of Ramallah</td>
+                            </tr>
+                            <tr>
+                                <td>Syria</td>
+                                <td>Damascus</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
         <section id="participants">
             <div class="section-header">
                 <h2>Call for Participants</h2>
@@ -70,9 +186,9 @@
                 <p><b>Day 4</b>: Graph Learning and Ideation</p>
                 <p><b>Day 5</b>: GitHub and Uncertainty, Inspirational Talks</p>
                 <br>
-                <p>⏰Application deadline: <b>June 29, 2025</b></p>
-                <p>⏰Summer Schools dates: <b>14 - 18 July, 2025 2:00 PM — 7:00 PM (Central Europe Time)</b></p>
-                <p>🌎Location: <b>wherever you are! This is a virtual event.</b></p>
+                <p>⏰ Application deadline: <b>June 29, 2025</b></p>
+                <p>⏰ Summer Schools dates: <b>14 - 18 July, 2025 2:00 PM — 7:00 PM (Central Europe Time)</b></p>
+                <p>🌎 Location: <b>wherever you are! This is a virtual event.</b></p>
                 <a href="https://forms.gle/YYmXcVZ6uF3RRn1n8" target="_blank" class="btn btn-primary"> 👉 Register here</a>
             </div>
         </section>
@@ -102,8 +218,8 @@
                     <br>
                     <p><b>Key dates:</b></p>
                     <ul>
-                        <li>📅<b>Application deadline:</b> June 29, 2025</li>
-                        <li>⏳<b>Mentorship period:</b> 1 September 2025 – 1 October 2026</li>
+                        <li>📅<b> Application deadline:</b> June 29, 2025</li>
+                        <li>⏳<b> Mentorship period:</b> 1 September 2025 – 1 October 2026</li>
                     </ul>
                     <br>
                 </div>
@@ -314,9 +430,11 @@
     </footer>
 
     <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
     <script src="js/navigation.js"></script>
     <script src="js/main.js"></script>
     <script src="js/import.js"></script>
+    <script src="js/map.js"></script>
 </body>
 
 </html>                            
