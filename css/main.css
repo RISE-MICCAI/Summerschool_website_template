@@ -269,13 +269,37 @@ section {
     padding: 1rem;
     text-align: left;
     font-weight: bold;
-    width: 50%;
 }
 
 .hub-table td {
     padding: 1rem;
     border-bottom: 1px solid var(--light-gray);
-    width: 50%;
+}
+
+/* Specific column widths for better layout */
+.hub-table th:nth-child(1),
+.hub-table td:nth-child(1) {
+    width: 12%;
+}
+
+.hub-table th:nth-child(2),
+.hub-table td:nth-child(2) {
+    width: 15%;
+}
+
+.hub-table th:nth-child(3),
+.hub-table td:nth-child(3) {
+    width: 20%;
+}
+
+.hub-table th:nth-child(4),
+.hub-table td:nth-child(4) {
+    width: 25%;
+}
+
+.hub-table th:nth-child(5),
+.hub-table td:nth-child(5) {
+    width: 28%;
 }
 
 .hub-table tr:last-child td {
@@ -429,11 +453,36 @@ footer .social-links a:hover {
     /* Responsive Tables */
     .hub-table {
         font-size: 0.9rem;
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
     }
 
     .hub-table th,
     .hub-table td {
-        padding: 0.75rem;
+        padding: 0.5rem;
+        font-size: 0.85rem;
+    }
+
+    /* Reset column widths for mobile - let content determine width */
+    .hub-table th:nth-child(1),
+    .hub-table td:nth-child(1),
+    .hub-table th:nth-child(2),
+    .hub-table td:nth-child(2),
+    .hub-table th:nth-child(3),
+    .hub-table td:nth-child(3),
+    .hub-table th:nth-child(4),
+    .hub-table td:nth-child(4),
+    .hub-table th:nth-child(5),
+    .hub-table td:nth-child(5) {
+        width: auto;
+        min-width: 120px;
+    }
+
+    /* Make email column wider for better readability */
+    .hub-table th:nth-child(5),
+    .hub-table td:nth-child(5) {
+        min-width: 200px;
     }
 
     .continent-section h3 {
