@@ -18,6 +18,7 @@ const hubLocations = [
     // Middle East
     { city: "Damascus", country: "Syria", lat: 33.5138, lng: 36.2765 },
     { city: "Amman", country: "Jordan", lat: 31.9539, lng: 35.9106 },
+    { city: "City of Ramallah", country: "Palestine", lat: 31.9074, lng: 35.2043 },
     { city: "Beirut", country: "Lebanon", lat: 33.8938, lng: 35.5018 }
 ];
 
@@ -62,9 +63,14 @@ function initializeHubMap() {
     
     // Add markers for each hub location
     hubLocations.forEach(location => {
+        // Add "(Online)" label for City of Ramallah
+        const label = location.city === "City of Ramallah" 
+            ? `${location.city} (Online), ${location.country}`
+            : `${location.city}, ${location.country}`;
+            
         const marker = L.marker([location.lat, location.lng], { icon: markerIcon })
             .addTo(map)
-            .bindTooltip(`${location.city}, ${location.country}`, {
+            .bindTooltip(label, {
                 permanent: false,
                 direction: 'top',
                 offset: [0, -40]

@@ -334,6 +334,96 @@ section {
     margin-bottom: 1rem;
 }
 
+/* Organisers Section */
+.organisers-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.organiser-card {
+    background-color: #f9f9f9;
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    text-align: center;
+    box-shadow: var(--box-shadow);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.organiser-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.organiser-card h3 {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.organiser-card .affiliation {
+    color: var(--dark-gray);
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    font-style: italic;
+}
+
+.organiser-card .email {
+    font-size: 0.95rem;
+    color: var(--text-color);
+}
+
+.organiser-card .email i {
+    color: var(--primary-color);
+    margin-right: 0.5rem;
+}
+
+.organiser-card .email a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.organiser-card .email a:hover {
+    color: var(--secondary-color);
+    text-decoration: underline;
+}
+
+/* Local Hub Organisers Section */
+.local-hub-organisers-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.hub-organiser-card {
+    background-color: #f9f9f9;
+    padding: 1.5rem;
+    border-radius: var(--border-radius);
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.hub-organiser-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
+}
+
+.hub-organiser-card h4 {
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.hub-organiser-card .hub-affiliation {
+    color: var(--dark-gray);
+    font-size: 0.95rem;
+    font-style: italic;
+}
+
 /* Footer */
 footer {
     background-color: var(--secondary-color);
@@ -531,5 +621,45 @@ footer .social-links a:hover {
     /* Map responsive */
     #hub-map {
         height: 300px;
+    }
+
+    /* Organisers responsive */
+    .organisers-content {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .organiser-card {
+        padding: 1.5rem;
+    }
+
+    .organiser-card h3 {
+        font-size: 1.3rem;
+    }
+
+    .organiser-card .affiliation {
+        font-size: 1rem;
+    }
+
+    .organiser-card .email {
+        font-size: 0.9rem;
+    }
+
+    /* Local Hub Organisers responsive */
+    .local-hub-organisers-content {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .hub-organiser-card {
+        padding: 1rem;
+    }
+
+    .hub-organiser-card h4 {
+        font-size: 1.1rem;
+    }
+
+    .hub-organiser-card .hub-affiliation {
+        font-size: 0.9rem;
     }
 }
