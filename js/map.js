@@ -1,25 +1,24 @@
 // Hub locations with coordinates
 const hubLocations = [
     // Africa
-    { city: "Cape Town", country: "South Africa", lat: -33.9249, lng: 18.4241 },
-    { city: "Cairo", country: "Egypt", lat: 30.0444, lng: 31.2357 },
-    { city: "Lagos", country: "Nigeria", lat: 6.5244, lng: 3.3792 },
+    { city: "Cape Town", country: "South Africa", lat: -33.9249, lng: 18.4241, contact: "Dr Frances Robertson", address: "University of Cape Town" },
+    { city: "Cairo", country: "Egypt", lat: 30.0444, lng: 31.2357, contact: "Prof. Aya Yassin", address: "Ain Shams University" },
+    { city: "Lagos", country: "Nigeria", lat: 6.5244, lng: 3.3792, contact: "Charity Umoren", address: "120/124 Ikorodu Road Igbobi, Lagos, Nigeria" },
     
     // Americas
-    { city: "Lima", country: "Peru", lat: -12.0464, lng: -77.0428 },
-    { city: "Guatemala City", country: "Guatemala", lat: 14.6349, lng: -90.5069 },
+    { city: "Lima", country: "Peru", lat: -12.0464, lng: -77.0428, contact: "Pedro Shiguihara", address: "Universidad San Ignacio de Loyola" },
+    { city: "Guatemala City", country: "Guatemala", lat: 14.6349, lng: -90.5069, contact: "Andrea", address: "Universidad Galileo" },
     
     // Asia
-    { city: "Lahore", country: "Pakistan", lat: 31.5497, lng: 74.3436 },
-    { city: "Khyber Pakhtunkhwa", country: "Pakistan", lat: 34.0151, lng: 71.5249 },
-    { city: "Al-Seeb", country: "Oman", lat: 23.6740, lng: 58.1829 },
-    { city: "Hanoi", country: "Vietnam", lat: 21.0278, lng: 105.8342 },
+    { city: "Lahore", country: "Pakistan", lat: 31.5497, lng: 74.3436, contact: "Waqas Sultani, Arif Mahmood and Mohsen Ali", address: "Information Technology" },
+    { city: "Khyber Pakhtunkhwa", country: "Pakistan", lat: 34.0151, lng: 71.5249, contact: "Khurram Jadoon", address: "Ghulam Ishaq Khan Institute of Engineering Sciences and Technology" },
+    { city: "Al-Seeb", country: "Oman", lat: 23.6740, lng: 58.1829, contact: "Fatma Al Raisi", address: "Sultan Qaboos University" },
+    { city: "Hanoi", country: "Vietnam", lat: 21.0278, lng: 105.8342, contact: "Dr. Hieu Pham", address: "VinUniversity" },
     
     // Middle East
-    { city: "Damascus", country: "Syria", lat: 33.5138, lng: 36.2765 },
-    { city: "Amman", country: "Jordan", lat: 31.9539, lng: 35.9106 },
-    { city: "City of Ramallah", country: "Palestine", lat: 31.9074, lng: 35.2043 },
-    { city: "Beirut", country: "Lebanon", lat: 33.8938, lng: 35.5018 }
+    { city: "Damascus", country: "Syria", lat: 33.5138, lng: 36.2765, contact: "Nada Ghneim", address: "Damascus University" },
+    { city: "Amman", country: "Jordan", lat: 31.9539, lng: 35.9106, contact: "Omar Alkadi", address: "University of Jordan" },
+    { city: "Beirut", country: "Lebanon", lat: 33.8938, lng: 35.5018, contact: "Razane Tajeddine and Ali Chehab", address: "American University of Beirut" }
 ];
 
 let markers = [];
@@ -63,17 +62,27 @@ function initializeHubMap() {
     
     // Add markers for each hub location
     hubLocations.forEach(location => {
-        // Add "(Online)" label for City of Ramallah
-        const label = location.city === "City of Ramallah" 
-            ? `${location.city} (Online), ${location.country}`
-            : `${location.city}, ${location.country}`;
+        // Build tooltip content
+        let tooltipContent = '';
+        if (location.city === "City of Ramallah") {
+            tooltipContent = `<strong>${location.city} (Online), ${location.country}</strong>`;
+        } else {
+            tooltipContent = `<strong>${location.city}, ${location.country}</strong>`;
+            if (location.contact) {
+                tooltipContent += `<br>Contact: ${location.contact}`;
+            }
+            if (location.address) {
+                tooltipContent += `<br>${location.address}`;
+            }
+        }
             
         const marker = L.marker([location.lat, location.lng], { icon: markerIcon })
             .addTo(map)
-            .bindTooltip(label, {
+            .bindTooltip(tooltipContent, {
                 permanent: false,
                 direction: 'top',
-                offset: [0, -40]
+                offset: [0, -40],
+                className: 'hub-tooltip'
             });
         
         markers.push(marker);

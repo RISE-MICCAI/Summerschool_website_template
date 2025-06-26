@@ -663,3 +663,16 @@ footer .social-links a:hover {
         font-size: 0.9rem;
     }
 }
+
+/* Map tooltip styling */
+.hub-tooltip {
+    font-size: 14px;
+    line-height: 1.4;
+    padding: 8px 12px;
+    white-space: normal;
+    max-width: 300px;
+}
+
+.hub-tooltip strong {
+    color: var(--primary-color);
+}
