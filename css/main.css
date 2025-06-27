@@ -424,6 +424,168 @@ section {
     font-style: italic;
 }
 
+/* Map tooltip styling */
+.hub-tooltip {
+    font-size: 14px;
+    line-height: 1.4;
+    padding: 8px 12px;
+    white-space: normal;
+    max-width: 300px;
+}
+
+.hub-tooltip strong {
+    color: var(--primary-color);
+}
+
+/* Behavior Sections */
+.behavior-content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.behavior-content p {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    color: var(--dark-gray);
+}
+
+.behavior-list {
+    list-style: none;
+    padding: 0;
+}
+
+.behavior-list li {
+    background-color: #f8f9fa;
+    padding: 1.2rem;
+    margin-bottom: 1rem;
+    border-left: 4px solid var(--primary-color);
+    border-radius: var(--border-radius);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.behavior-list li:hover {
+    transform: translateX(5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+#unexpected-behavior .behavior-list li {
+    border-left-color: #dc3545;
+}
+
+#unexpected-behavior .behavior-list li:hover {
+    border-left-color: #c82333;
+}
+
+/* Code of Conduct Section */
+.conduct-content {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.conduct-intro {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding: 2rem;
+    background-color: #f8f9fa;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+}
+
+.conduct-intro p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: var(--dark-gray);
+}
+
+.conduct-summary {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.conduct-card {
+    background-color: white;
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.conduct-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
+}
+
+.conduct-card.expected {
+    border-top: 4px solid #28a745;
+}
+
+.conduct-card.unacceptable {
+    border-top: 4px solid #dc3545;
+}
+
+.conduct-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+.conduct-card.expected h3 i {
+    color: #28a745;
+}
+
+.conduct-card.unacceptable h3 i {
+    color: #dc3545;
+}
+
+.conduct-card p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    color: var(--dark-gray);
+}
+
+.conduct-contact {
+    background-color: #e3f2fd;
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    text-align: center;
+    border: 2px solid var(--primary-color);
+}
+
+.conduct-contact h3 {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.conduct-contact p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 0.5rem;
+}
+
+.conduct-contact i {
+    color: var(--primary-color);
+    margin-right: 0.5rem;
+}
+
+.conduct-contact a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.conduct-contact a:hover {
+    color: var(--secondary-color);
+    text-decoration: underline;
+}
+
 /* Footer */
 footer {
     background-color: var(--secondary-color);
@@ -662,17 +824,51 @@ footer .social-links a:hover {
     .hub-organiser-card .hub-affiliation {
         font-size: 0.9rem;
     }
-}
 
-/* Map tooltip styling */
-.hub-tooltip {
-    font-size: 14px;
-    line-height: 1.4;
-    padding: 8px 12px;
-    white-space: normal;
-    max-width: 300px;
-}
+    /* Code of Conduct responsive */
+    .behavior-content p {
+        font-size: 1rem;
+    }
 
-.hub-tooltip strong {
-    color: var(--primary-color);
+    .behavior-list li {
+        padding: 1rem;
+        font-size: 0.95rem;
+    }
+
+    .conduct-intro {
+        padding: 1.5rem;
+    }
+
+    .conduct-intro p {
+        font-size: 1rem;
+    }
+
+    .conduct-summary {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .conduct-card {
+        padding: 1.5rem;
+    }
+
+    .conduct-card h3 {
+        font-size: 1.2rem;
+    }
+
+    .conduct-card p {
+        font-size: 0.95rem;
+    }
+
+    .conduct-contact {
+        padding: 1.5rem;
+    }
+
+    .conduct-contact h3 {
+        font-size: 1.3rem;
+    }
+
+    .conduct-contact p {
+        font-size: 1rem;
+    }
 }
