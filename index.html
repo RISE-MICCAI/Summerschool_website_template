@@ -1,285 +1,480 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>RISE-MICCAI Summer School 2025</title>
     <script src="js/navigation.js"></script>
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
-    <link rel="stylesheet" href="css/main.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css"
+    />
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
 
-</head>
-
-<body>
-    <header style="background-color: white;">
-        <div class="container header-content">
-            <img src="resources/images/logo.png" alt="MICCAI Summer School Logo" class="logo">
-            <div class="header-title">
-                <h1 style="text-align: right;color: #0c3e5e;">14 -18 July, Virtual</h1>
-            </div>
+  <body>
+    <header style="background-color: white">
+      <div class="container header-content">
+        <img
+          src="resources/images/logo.png"
+          alt="MICCAI Summer School Logo"
+          class="logo"
+        />
+        <div class="header-title">
+          <h1 style="text-align: right; color: #0c3e5e">
+            14 -18 July, Virtual
+          </h1>
         </div>
+      </div>
     </header>
 
     <nav>
-        <div class="container nav-container">
-            <button class="mobile-menu-btn">
-                <i class="fas fa-bars"></i>
-            </button>
-            <ul class="nav-links">
-                <li><a href="#program">Schedule</a></li>
-                <li><a href="#hub-locations">Local Hubs</a></li>
-                <li><a href="#participants">Call for Participants</a></li>
-                <li><a href="#mentorship">Mentorship Program</a></li>
-            <!--<li><a href="#challenge">Challenge</a></li>
+      <div class="container nav-container">
+        <button class="mobile-menu-btn">
+          <i class="fas fa-bars"></i>
+        </button>
+        <ul class="nav-links">
+          <li><a href="#program">Schedule</a></li>
+          <li><a href="#hub-locations">Local Hubs</a></li>
+          <li><a href="#participants">Call for Participants</a></li>
+          <li><a href="#mentorship">Mentorship Program</a></li>
+          <!--<li><a href="#challenge">Challenge</a></li>
                 <li><a href="#materials">Speaker Materials</a></li>
                 <li><a href="#hubs">Local Hubs</a></li>
                 <li><a href="pages/gallery.html">Gallery</a></li> -->
-            </ul>
-        </div>
+        </ul>
+      </div>
     </nav>
 
     <section class="hero">
-        <div class="hero-content">
-            <h2>Join the RISE-MICCAI Summer School 2025</h2>
-            <p>Expand your knowledge, connect with experts, and advance your career in medical imaging and intervention</p>
-            <div>
-                <a href="#participants" class="btn btn-primary">Register Now</a>
-                <a href="#program" class="btn btn-secondary">View Schedule</a>
-            </div>
+      <div class="hero-content">
+        <h2>Join the RISE-MICCAI Summer School 2025</h2>
+        <p>
+          Expand your knowledge, connect with experts, and advance your career
+          in medical imaging and intervention
+        </p>
+        <div>
+          <a href="#participants" class="btn btn-primary">Register Now</a>
+          <a href="#program" class="btn btn-secondary">View Schedule</a>
         </div>
+      </div>
     </section>
 
     <main class="container">
-        <section id="program">
-        </section>
+      <section id="program"></section>
 
-        <section id="hub-locations">
-            <div class="section-header">
-                <h2>Local Hub Locations</h2>
-            </div>
-            <p style="text-align: center; margin-bottom: 2rem; font-size: 1.1rem; max-width: 800px; margin-left: auto; margin-right: auto;">
-                The RISE Summer School will be fully online. But, we have also a few local hubs that will display the summer school and organise some local activities. More details to follow! Hubs location and details below:
+      <section id="hub-locations">
+        <div class="section-header">
+          <h2>Local Hub Locations</h2>
+        </div>
+        <p
+          style="
+            text-align: center;
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+          "
+        >
+          The RISE Summer School will be fully online. But, we have also a few
+          local hubs that will display the summer school and organise some local
+          activities. More details to follow! Hubs location and details below:
+        </p>
+        <div
+          id="hub-map"
+          style="
+            height: 400px;
+            margin: 2rem 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+          "
+        ></div>
+        <div class="hub-locations">
+          <div class="continent-section">
+            <h3>Africa</h3>
+            <table class="hub-table">
+              <thead>
+                <tr>
+                  <th>Country</th>
+                  <th>City</th>
+                  <th>Contact Person</th>
+                  <th>Address</th>
+                  <th>Email/Phone</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Egypt</td>
+                  <td>Cairo</td>
+                  <td>Prof. Aya Yassin</td>
+                  <td>Ain Shams University</td>
+                  <td>ayassin@med.asu.edu.eg</td>
+                </tr>
+                <tr>
+                  <td>Nigeria</td>
+                  <td>Lagos</td>
+                  <td>Charity Umoren</td>
+                  <td>120/124 Ikorodu Road Igbobi, Lagos, Nigeria</td>
+                  <td>udunna.anazodo@mcgill.ca, madewole@mailab.io</td>
+                </tr>
+                <tr>
+                  <td>South Africa</td>
+                  <td>Cape Town</td>
+                  <td>Dr Frances Robertson</td>
+                  <td>University of Cape Town</td>
+                  <td>francesrob@gmail.com</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="continent-section">
+            <h3>Americas</h3>
+            <table class="hub-table">
+              <thead>
+                <tr>
+                  <th>Country</th>
+                  <th>City</th>
+                  <th>Contact Person</th>
+                  <th>Address</th>
+                  <th>Email/Phone</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Guatemala</td>
+                  <td>Guatemala City</td>
+                  <td>Andrea Lara</td>
+                  <td>Universidad Galileo</td>
+                  <td>andrealh@galileo.edu</td>
+                </tr>
+                <tr>
+                  <td>Peru</td>
+                  <td>Lima</td>
+                  <td>Pedro Shiguihara</td>
+                  <td>Universidad San Ignacio de Loyola</td>
+                  <td>p.shiguihara@gmail.com</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="continent-section">
+            <h3>Asia</h3>
+            <table class="hub-table">
+              <thead>
+                <tr>
+                  <th>Country</th>
+                  <th>City</th>
+                  <th>Contact Person</th>
+                  <th>Address</th>
+                  <th>Email/Phone</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Oman</td>
+                  <td>Al-Seeb</td>
+                  <td>Fatma Al Raisi</td>
+                  <td>Oman Medical College</td>
+                  <td>ayman.alhaj@omc.edu.om</td>
+                </tr>
+                <tr>
+                  <td>Pakistan</td>
+                  <td>Lahore</td>
+                  <td>Waqas Sultani, Arif Mahmood and Mohsen Ali</td>
+                  <td>Information Technology</td>
+                  <td>
+                    waqas.sultani@itu.edu.pk, arif.mahmood@itu.edu.pk,
+                    mohsen.ali@itu.edu.pk
+                  </td>
+                </tr>
+                <tr>
+                  <td>Pakistan</td>
+                  <td>Khyber Pakhtunkhwa</td>
+                  <td>Khurram Jadoon</td>
+                  <td>
+                    Ghulam Ishaq Khan Institute of Engineering Sciences and
+                    Technology
+                  </td>
+                  <td>khurram.jadoon@giki.edu.pk</td>
+                </tr>
+                <tr>
+                  <td>Vietnam</td>
+                  <td>Hanoi</td>
+                  <td>Dr. Hieu Pham</td>
+                  <td>VinUniversity</td>
+                  <td>hieu.ph@vinuni.edu.vn</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="continent-section">
+            <h3>Middle East</h3>
+            <table class="hub-table">
+              <thead>
+                <tr>
+                  <th>Country</th>
+                  <th>City</th>
+                  <th>Contact Person</th>
+                  <th>Address</th>
+                  <th>Email/Phone</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Jordan</td>
+                  <td>Amman</td>
+                  <td>Omar Alkadi</td>
+                  <td>University of Jordan</td>
+                  <td>O.Alkadi@ju.edu.jo</td>
+                </tr>
+                <tr>
+                  <td>Lebanon</td>
+                  <td>Beirut</td>
+                  <td>Razane Tajeddine, Ali Chehab</td>
+                  <td>American University of Beirut</td>
+                  <td>rt37@aub.edu.lb, chehab@aub.edu.lb</td>
+                </tr>
+                <tr>
+                  <td>Syria</td>
+                  <td>Damascus</td>
+                  <td>Nada Ghneim</td>
+                  <td>Damascus University</td>
+                  <td>
+                    https://www.aiu.edu.sy/en/7780/Dr.-Nada-Ghuneim,
+                    Ibrahim.Almakky@mbzuai.ac.ae
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <section id="participants">
+        <div class="section-header">
+          <h2>Call for Participants</h2>
+        </div>
+        <div class="cta-box">
+          <h3>Join Us at RISE-MICCAI Summer School 2025</h3>
+          <p>
+            Are you a first-year PhD student or early-career researcher working
+            in biomedical data analysis—especially from low- and middle-income
+            countries (LMICs)? Join us <b>July 14–18, 2025</b> for the
+            RISE-MICCAI Summer School! Over five days, you’ll gain hands-on
+            tutorials, technical and soft-skills lectures, interactive Q&A
+            sessions and networking opportunities designed to enhance your
+            research toolkit and connect you with peers worldwide.
+          </p>
+          <br />
+          <p>🧠<b>Agenda:</b></p>
+          <p>
+            <b>Day 1</b>: Welcome, New Trends in AI, Good practices in AI & LISA
+            Challenge Kickoff
+          </p>
+          <p>
+            <b>Day 2</b>: Design Thinking, Diffusion Models, MICCAI Workshops
+          </p>
+          <p><b>Day 3</b>: Writing a MICCAI Paper, Future Insights in AI</p>
+          <p><b>Day 4</b>: Graph Learning and Ideation</p>
+          <p><b>Day 5</b>: GitHub and Uncertainty, Inspirational Talks</p>
+          <br />
+          <p>⏰ Application deadline: <b>June 29, 2025</b></p>
+          <p>
+            ⏰ Summer Schools dates:
+            <b>14 - 18 July, 2025 2:00 PM — 7:00 PM (Central Europe Time)</b>
+          </p>
+          <p>🌎 Location: <b>wherever you are! This is a virtual event.</b></p>
+          <a
+            href="https://forms.gle/YYmXcVZ6uF3RRn1n8"
+            target="_blank"
+            class="btn btn-primary"
+          >
+            👉 Register here</a
+          >
+        </div>
+      </section>
+
+      <section id="mentorship">
+        <div class="section-header">
+          <h2>Mentorship Program</h2>
+        </div>
+        <div class="mentorship-content">
+          <div class="mentorship-details">
+            <p>
+              The Summer School will offer the possibility to participate in a
+              mentorship program. A selected group of students will be paired
+              with a mentor for one year with the intention of writing a paper
+              for MICCAI 2026. This is a unique opportunity, and we encourage
+              everyone to apply. If you wish to be part of the mentorship
+              program in addition to registering for the Summer School, please
+              fill out this form:
             </p>
-            <div id="hub-map" style="height: 400px; margin: 2rem 0; border-radius: 8px; box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);"></div>
-            <div class="hub-locations">
-                <div class="continent-section">
-                    <h3>Africa</h3>
-                    <table class="hub-table">
-                        <thead>
-                            <tr>
-                                <th>Country</th>
-                                <th>City</th>
-                                <th>Contact Person</th>
-                                <th>Address</th>
-                                <th>Email/Phone</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Egypt</td>
-                                <td>Cairo</td>
-                                <td>Prof. Aya Yassin</td>
-                                <td>Ain Shams University</td>
-                                <td>ayassin@med.asu.edu.eg</td>
-                            </tr>
-                            <tr>
-                                <td>Nigeria</td>
-                                <td>Lagos</td>
-                                <td>Charity Umoren</td>
-                                <td>120/124 Ikorodu Road Igbobi, Lagos, Nigeria</td>
-                                <td>udunna.anazodo@mcgill.ca, madewole@mailab.io</td>
-                            </tr>
-                            <tr>
-                                <td>South Africa</td>
-                                <td>Cape Town</td>
-                                <td>Dr Frances Robertson</td>
-                                <td>University of Cape Town</td>
-                                <td>francesrob@gmail.com</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
+            <br />
+            <a
+              href="https://forms.gle/gJDSQKT9hX6AozFq7"
+              target="_blank"
+              class="btn btn-primary"
+              >👉 Mentor Registration Form</a
+            >
+            <br />
+            <a
+              href="https://docs.google.com/forms/d/e/1FAIpQLScNwg6bO1N4NyFiQiLX0_17FNKXjjUEnIT7oxamUneZkA0yrw/viewform?usp=dialog"
+              target="_blank"
+              class="btn btn-primary"
+              >👉 Mentee Registration Form</a
+            >
+            <br />
+            <br />
+            <p><b>What you’ll gain:</b></p>
+            <ul>
+              <li>
+                🎯 Personalized guidance on project design, writing, and
+                publishing
+              </li>
+              <li>🤝 Regular one-on-one sessions with your mentor</li>
+              <li>
+                📄 Hands-on support to develop & submit your MICCAI 2026 paper
+              </li>
+            </ul>
+            <br />
+          </div>
+          <div class="mentorship-apply">
+            <br />
+            <p><b>Selection Criteria</b></p>
+            <p>
+              The mentorship programme will be offered only to students who have
+              never attended MICCAI before and are looking to attend MICCAI
+              2026. We aim to match as many eligible applicants as possible.
+              However, the number of matched mentees will be limited by the
+              availability of mentors and program resources.
+            </p>
+            <br />
+            <p>
+              Priority will be given to students from underrepresented minority
+              groups. To be eligible, you must work on a challenge task for
+              approximately one month and submit the results to the challenge
+              organizers. All details will be provided during the Summer School.
+            </p>
+            <br />
+            <p><b>Key dates:</b></p>
+            <ul>
+              <li>
+                📅<b> Application deadline:</b> 1 August, 2025 (Mentor) / 18
+                July, 2025 (Mentee)
+              </li>
+              <li>
+                ⏳<b> Mentorship period:</b> 1 September 2025 – 1 October 2026
+              </li>
+            </ul>
+            <br />
+          </div>
+        </div>
+      </section>
 
-                <div class="continent-section">
-                    <h3>Americas</h3>
-                    <table class="hub-table">
-                        <thead>
-                            <tr>
-                                <th>Country</th>
-                                <th>City</th>
-                                <th>Contact Person</th>
-                                <th>Address</th>
-                                <th>Email/Phone</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Guatemala</td>
-                                <td>Guatemala City</td>
-                                <td>Andrea Lara</td>
-                                <td>Universidad Galileo</td>
-                                <td>andrealh@galileo.edu</td>
-                            </tr>
-                            <tr>
-                                <td>Peru</td>
-                                <td>Lima</td>
-                                <td>Pedro Shiguihara</td>
-                                <td>Universidad San Ignacio de Loyola</td>
-                                <td>p.shiguihara@gmail.com</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
+      <section id="code-of-conduct">
+        <div class="section-header">
+          <h2>Code of Conduct</h2>
+        </div>
+        <div class="code-of-conduct-content">
+          <p>
+            RISE MICCAI Summer School is dedicated to providing a
+            harassment-free experience and safe environment for all, regardless
+            of race, cultural affiliations, gender, nationality, beliefs, age,
+            or disability. Indecent imagery is not appropriate at any of the
+            Academy’s events including virtual and in-person events.
+          </p>
+          <p>
+            All attendees, speakers, and volunteers are expected to comply with
+            this code of conduct and violations of its standards may result in
+            sanctions or expulsion from participating in events, at the
+            discretion of the Academy Team. Upholding the standards of behavior
+            is mandatory to maintain RISE's integrity and create a positive
+            environment.
+          </p>
 
-                <div class="continent-section">
-                    <h3>Asia</h3>
-                    <table class="hub-table">
-                        <thead>
-                            <tr>
-                                <th>Country</th>
-                                <th>City</th>
-                                <th>Contact Person</th>
-                                <th>Address</th>
-                                <th>Email/Phone</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Oman</td>
-                                <td>Al-Seeb</td>
-                                <td>Fatma Al Raisi</td>
-                                <td>Oman Medical College</td>
-                                <td>ayman.alhaj@omc.edu.om</td>
-                            </tr>
-                            <tr>
-                                <td>Pakistan</td>
-                                <td>Lahore</td>
-                                <td>Waqas Sultani, Arif Mahmood and Mohsen Ali</td>
-                                <td>Information Technology</td>
-                                <td>waqas.sultani@itu.edu.pk, arif.mahmood@itu.edu.pk, mohsen.ali@itu.edu.pk</td>
-                            </tr>
-                            <tr>
-                                <td>Pakistan</td>
-                                <td>Khyber Pakhtunkhwa</td>
-                                <td>Khurram Jadoon</td>
-                                <td>Ghulam Ishaq Khan Institute of Engineering Sciences and Technology</td>
-                                <td>khurram.jadoon@giki.edu.pk</td>
-                            </tr>
-                            <tr>
-                                <td>Vietnam</td>
-                                <td>Hanoi</td>
-                                <td>Dr. Hieu Pham</td>
-                                <td>VinUniversity</td>
-                                <td>hieu.ph@vinuni.edu.vn</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
+          <br />
 
-                <div class="continent-section">
-                    <h3>Middle East</h3>
-                    <table class="hub-table">
-                        <thead>
-                            <tr>
-                                <th>Country</th>
-                                <th>City</th>
-                                <th>Contact Person</th>
-                                <th>Address</th>
-                                <th>Email/Phone</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Jordan</td>
-                                <td>Amman</td>
-                                <td>Omar Alkadi</td>
-                                <td>University of Jordan</td>
-                                <td>O.Alkadi@ju.edu.jo</td>
-                            </tr>
-                            <tr>
-                                <td>Lebanon</td>
-                                <td>Beirut</td>
-                                <td>Razane Tajeddine, Ali Chehab</td>
-                                <td>American University of Beirut</td>
-                                <td>rt37@aub.edu.lb, chehab@aub.edu.lb</td>
-                            </tr>
-                            <tr>
-                                <td>Syria</td>
-                                <td>Damascus</td>
-                                <td>Nada Ghneim</td>
-                                <td>Damascus University</td>
-                                <td>https://www.aiu.edu.sy/en/7780/Dr.-Nada-Ghuneim, Ibrahim.Almakky@mbzuai.ac.ae</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </section>
+          <h3>Expected behavior</h3>
+          <p>All attendees, speakers, and volunteers at RISE events must:</p>
+          <ol>
+            <li>
+              Behave professionally and responsibly towards each other, both
+              in-person and online, during all formal and informal social
+              activities, regardless of location.
+            </li>
+            <li>
+              Respect each other and avoid making judgments based on race,
+              gender, nationality, beliefs, age, or disability.
+            </li>
+            <li>
+              Refrain from any forms of harassment, bullying, or discrimination
+              towards fellow participants.
+            </li>
+            <li>
+              Adhere to the guidelines and instructions given by RISE organizers
+              and staff during events.
+            </li>
+            <li>
+              Maintain confidentiality of any sensitive information shared
+              during events.
+            </li>
+            <li>Avoid engaging in any illegal or unethical behavior.</li>
+          </ol>
 
-        <section id="participants">
-            <div class="section-header">
-                <h2>Call for Participants</h2>
-            </div>
-            <div class="cta-box">
-                <h3>Join Us at RISE-MICCAI Summer School 2025</h3>
-                <p>Are you a first-year PhD student or early-career researcher working in biomedical data analysis—especially from low- and middle-income countries (LMICs)? Join us <b>July 14–18, 2025</b> for the RISE-MICCAI Summer School! Over five days, you’ll gain hands-on tutorials, technical and soft-skills lectures, interactive Q&A sessions and networking opportunities designed to enhance your research toolkit and connect you with peers worldwide.</p>
-                <br>
-                <p>🧠<b>Agenda:</b></p>
-                <p><b>Day 1</b>: Welcome, New Trends in AI, Good practices in AI & LISA Challenge Kickoff</p>
-                <p><b>Day 2</b>: Design Thinking, Diffusion Models, MICCAI Workshops</p>
-                <p><b>Day 3</b>: Writing a MICCAI Paper, Future Insights in AI</p>
-                <p><b>Day 4</b>: Graph Learning and Ideation</p>
-                <p><b>Day 5</b>: GitHub and Uncertainty, Inspirational Talks</p>
-                <br>
-                <p>⏰ Application deadline: <b>June 29, 2025</b></p>
-                <p>⏰ Summer Schools dates: <b>14 - 18 July, 2025 2:00 PM — 7:00 PM (Central Europe Time)</b></p>
-                <p>🌎 Location: <b>wherever you are! This is a virtual event.</b></p>
-                <a href="https://forms.gle/YYmXcVZ6uF3RRn1n8" target="_blank" class="btn btn-primary"> 👉 Register here</a>
-            </div>
-        </section>
+          <br />
 
-        <section id="mentorship">
-            <div class="section-header">
-                <h2>Mentorship Program</h2>
-            </div>
-            <div class="mentorship-content">
-                <div class="mentorship-details">
-                    <p>The Summer School will offer the possibility to participate in a mentorship program. A selected group of students will be paired with a mentor for one year with the intention of writing a paper for MICCAI 2026. This is a unique opportunity, and we encourage everyone to apply. If you wish to be part of the mentorship program in addition to registering for the Summer School, please fill out this form: </p>
-                    <br>
-                    <a href="https://forms.gle/gJDSQKT9hX6AozFq7" target="_blank" class="btn btn-primary">👉 Mentor Registration Form</a>
-                        <br>
-                        <a href="https://docs.google.com/forms/d/e/1FAIpQLScNwg6bO1N4NyFiQiLX0_17FNKXjjUEnIT7oxamUneZkA0yrw/viewform?usp=dialog" target="_blank" class="btn btn-primary">👉 Mentee Registration Form</a>
-                        <br>
-                        <br>
-                    <p><b>What you’ll gain:</b></p>
-                    <ul>
-                        <li>🎯 Personalized guidance on project design, writing, and publishing</li>
-                        <li>🤝 Regular one-on-one sessions with your mentor</li>
-                        <li>📄 Hands-on support to develop & submit your MICCAI 2026 paper</li>
-                    </ul>
-                    <br>
-                </div>
-                <div class="mentorship-apply">
-                    <br>
-                    <p><b>Selection Criteria</b></p>
-                    <p>The mentorship programme will be offered only to students who have never attended MICCAI before and are looking to attend MICCAI 2026. We aim to match as many eligible applicants as possible. However, the number of matched mentees will be limited by the availability of mentors and program resources. </p>
-                    <br>
-                    <p>Priority will be given to students from underrepresented minority groups. To be eligible, you must work on a challenge task for approximately one month and submit the results to the challenge organizers. All details will be provided during the Summer School.</p>
-                    <br>
-                    <p><b>Key dates:</b></p>
-                    <ul>
-                        <li>📅<b> Application deadline:</b> 1 August, 2025 (Mentor) / 18 July, 2025 (Mentee)</li>
-                        <li>⏳<b> Mentorship period:</b> 1 September 2025 – 1 October 2026</li>
-                    </ul>
-                    <br>
-                </div>
-            </div>
-        </section>
+          <h3>Unexpected behavior</h3>
+          <ol>
+            <li>
+              Behaving in a manner that is disruptive or disrespectful towards
+              other participants, staff, or the event itself.
+            </li>
+            <li>
+              Using language that is inappropriate, disrespectful, or offensive
+              towards other participants, staff, or the event itself.
+            </li>
+            <li>
+              Engaging in any illegal or unethical behavior, such as theft,
+              plagiarism, vandalism, or fraud.
+            </li>
+            <li>
+              Disobeying or ignoring the guidelines and instructions given by
+              RISE organizers and staff during the event.
+            </li>
+            <li>
+              Engaging in any behavior that may pose a threat to the safety or
+              security of other participants, staff, or the event itself.
+            </li>
+            <li>
+              Intentionally causing damage to the event venue, equipment, or
+              other property.
+            </li>
+            <li>
+              Engaging in any form of inappropriate or unwanted physical contact
+              towards other participants or staff.
+            </li>
+            <li>
+              Violating the confidentiality of any sensitive information shared
+              during the event.
+            </li>
+            <li>
+              Using RISE events or platforms for personal or commercial gain
+              without prior authorization from the organizers.
+            </li>
+          </ol>
+        </div>
+      </section>
 
-        <!--<section id="challenge">
+      <!--<section id="challenge">
             <div class="section-header">
                 <h2>Challenge</h2>
             </div>
@@ -304,7 +499,7 @@
             </div>
         </section>-->
 
-    <!--<section id="materials">
+      <!--<section id="materials">
             <div class="section-header">
                 <h2>Speaker Materials</h2>
             </div>
@@ -339,7 +534,7 @@
             </div>
         </section> -->
 
-        <!--<section id="hubs">
+      <!--<section id="hubs">
             <div class="section-header">
                 <h2>Local Hubs</h2>
             </div>
@@ -417,9 +612,7 @@
             </div>
         </section>-->
 
-
-
-        <!--<section id="testimonials">
+      <!--<section id="testimonials">
             <div class="section-header">
                 <h2>What Past Participants Say</h2>
             </div>
@@ -451,92 +644,134 @@
                 </div>
             </div>
         </section>-->
-        <section id="organisers">
-            <div class="section-header">
-                <h2>RISE Summer School Organisers</h2>
-            </div>
-            <div class="organisers-content">
-                <div class="organiser-card">
-                    <h3>David Duenas-Gaviria</h3>
-                    <p class="affiliation">Summer/Winter Coordinator, PhD Candidate<br>Universitätsklinikum Bonn, Germany</p>
-                    <p class="email"><i class="fas fa-envelope"></i> <a href="mailto:David.Duenas-Gaviria@ukbonn.de">David.Duenas-Gaviria@ukbonn.de</a></p>
-                </div>
-                <div class="organiser-card">
-                    <h3>Baoru Huang</h3>
-                    <p class="affiliation">Assistant Professor<br>University of Liverpool, UK</p>
-                    <p class="email"><i class="fas fa-envelope"></i> <a href="mailto:baoru.huang@liverpool.ac.uk">baoru.huang@liverpool.ac.uk</a></p>
-                </div>
-            </div>
-        </section>
+      <section id="organisers">
+        <div class="section-header">
+          <h2>RISE Summer School Organisers</h2>
+        </div>
+        <div class="organisers-content">
+          <div class="organiser-card">
+            <h3>David Duenas-Gaviria</h3>
+            <p class="affiliation">
+              Summer/Winter Coordinator, PhD Candidate<br />Universitätsklinikum
+              Bonn, Germany
+            </p>
+            <p class="email">
+              <i class="fas fa-envelope"></i>
+              <a href="mailto:David.Duenas-Gaviria@ukbonn.de"
+                >David.Duenas-Gaviria@ukbonn.de</a
+              >
+            </p>
+          </div>
+          <div class="organiser-card">
+            <h3>Baoru Huang</h3>
+            <p class="affiliation">
+              Assistant Professor<br />University of Liverpool, UK
+            </p>
+            <p class="email">
+              <i class="fas fa-envelope"></i>
+              <a href="mailto:baoru.huang@liverpool.ac.uk"
+                >baoru.huang@liverpool.ac.uk</a
+              >
+            </p>
+          </div>
+        </div>
+      </section>
 
-        <section id="local-hub-organisers">
-            <div class="section-header">
-                <h2>Local Hub Organisers</h2>
-            </div>
-            <div class="local-hub-organisers-content">
-                <div class="hub-organiser-card">
-                    <h4>Andrea Lara</h4>
-                    <p class="hub-affiliation">Universidad Galileo</p>
-                </div>
-                <div class="hub-organiser-card">
-                    <h4>Tareen Dawood</h4>
-                    <p class="hub-affiliation">Denmark Technical University</p>
-                </div>
-                <div class="hub-organiser-card">
-                    <h4>Ibrahim Makky</h4>
-                    <p class="hub-affiliation">Mohamed bin Zayed University of Artificial Intelligence</p>
-                </div>
-                <div class="hub-organiser-card">
-                    <h4>Shahad Hardan</h4>
-                    <p class="hub-affiliation">Mohamed bin Zayed University of Artificial Intelligence</p>
-                </div>
-                <div class="hub-organiser-card">
-                    <h4>Rabia Haq</h4>
-                    <p class="hub-affiliation">3DR Labs</p>
-                </div>
-                <div class="hub-organiser-card">
-                    <h4>Udunna Anazodo</h4>
-                    <p class="hub-affiliation">Department of Neurology and Neurosurgery at McGill</p>
-                </div>
-                <div class="hub-organiser-card">
-                    <h4>Nhat Phung</h4>
-                    <p class="hub-affiliation">AstraZeneca</p>
-                </div>
-                <div class="hub-organiser-card">
-                    <h4>Maruf Adewole</h4>
-                    <p class="hub-affiliation">Medical Artificial Intelligence Laboratory (MAI Lab)</p>
-                </div>
-            </div>
-        </section>
+      <section id="local-hub-organisers">
+        <div class="section-header">
+          <h2>Local Hub Organisers</h2>
+        </div>
+        <div class="local-hub-organisers-content">
+          <div class="hub-organiser-card">
+            <h4>Andrea Lara</h4>
+            <p class="hub-affiliation">Universidad Galileo</p>
+          </div>
+          <div class="hub-organiser-card">
+            <h4>Tareen Dawood</h4>
+            <p class="hub-affiliation">Denmark Technical University</p>
+          </div>
+          <div class="hub-organiser-card">
+            <h4>Ibrahim Makky</h4>
+            <p class="hub-affiliation">
+              Mohamed bin Zayed University of Artificial Intelligence
+            </p>
+          </div>
+          <div class="hub-organiser-card">
+            <h4>Shahad Hardan</h4>
+            <p class="hub-affiliation">
+              Mohamed bin Zayed University of Artificial Intelligence
+            </p>
+          </div>
+          <div class="hub-organiser-card">
+            <h4>Rabia Haq</h4>
+            <p class="hub-affiliation">3DR Labs</p>
+          </div>
+          <div class="hub-organiser-card">
+            <h4>Udunna Anazodo</h4>
+            <p class="hub-affiliation">
+              Department of Neurology and Neurosurgery at McGill
+            </p>
+          </div>
+          <div class="hub-organiser-card">
+            <h4>Nhat Phung</h4>
+            <p class="hub-affiliation">AstraZeneca</p>
+          </div>
+          <div class="hub-organiser-card">
+            <h4>Maruf Adewole</h4>
+            <p class="hub-affiliation">
+              Medical Artificial Intelligence Laboratory (MAI Lab)
+            </p>
+          </div>
+        </div>
+      </section>
     </main>
 
     <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-info">
-                    <h3>RISE-MICCAI Summer School 2025</h3>
-                    <p>A premier educational event for medical image computing and computer-assisted intervention.</p>
-                    <div class="social-links">
-                        <a href="https://x.com/RMiccai" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                        <a href="https://www.linkedin.com/company/miccai/posts/?feedView=all" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                        <a href="https://github.com/RISE-MICCAI" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                    </div>
-                </div>
-  
-                <div class="footer-links">
-                    <h3>Resources</h3>
-                    <ul>
-                        <li><a href="https://miccai.org/">MICCAI Society</a></li>
-                        <li><a href="https://rise-miccai.github.io/RISE_website/event/">Past Summer Schools</a></li>
-                        <li><a href="#">FAQ</a></li>
-                        <li><a href="mailto:David.Duenas-Gaviria@ukbonn.de">Contact Us</a></li>
-                    </ul>
-                </div>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-info">
+            <h3>RISE-MICCAI Summer School 2025</h3>
+            <p>
+              A premier educational event for medical image computing and
+              computer-assisted intervention.
+            </p>
+            <div class="social-links">
+              <a href="https://x.com/RMiccai" aria-label="Twitter"
+                ><i class="fab fa-twitter"></i
+              ></a>
+              <a
+                href="https://www.linkedin.com/company/miccai/posts/?feedView=all"
+                aria-label="LinkedIn"
+                ><i class="fab fa-linkedin"></i
+              ></a>
+              <a href="https://github.com/RISE-MICCAI" aria-label="GitHub"
+                ><i class="fab fa-github"></i
+              ></a>
             </div>
-            <div class="footer-bottom">
-                <p style="text-align: center;">&copy; 2025 RISE-MICCAI Summer School. All rights reserved.</p>
-            </div>
+          </div>
+
+          <div class="footer-links">
+            <h3>Resources</h3>
+            <ul>
+              <li><a href="https://miccai.org/">MICCAI Society</a></li>
+              <li>
+                <a href="https://rise-miccai.github.io/RISE_website/event/"
+                  >Past Summer Schools</a
+                >
+              </li>
+              <li><a href="#">FAQ</a></li>
+              <li>
+                <a href="mailto:David.Duenas-Gaviria@ukbonn.de">Contact Us</a>
+              </li>
+            </ul>
+          </div>
         </div>
+        <div class="footer-bottom">
+          <p style="text-align: center">
+            &copy; 2025 RISE-MICCAI Summer School. All rights reserved.
+          </p>
+        </div>
+      </div>
     </footer>
 
     <!-- Scripts -->
@@ -545,6 +780,5 @@
     <script src="js/main.js"></script>
     <script src="js/import.js"></script>
     <script src="js/map.js"></script>
-</body>
-
-</html>                            
+  </body>
+</html>
