@@ -156,6 +156,12 @@ main {
   padding: 0 1rem;
 }
 
+main.container {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
 ul,
 ol {
   padding-left: 20px;
@@ -240,13 +246,29 @@ section {
   box-shadow: var(--box-shadow);
 }
 
+#hub-map-container {
+  width: 100%;
+  margin: 2rem 0;
+  padding: 0;
+}
+
+#hub-map {
+  width: 100%;
+  max-width: 1600px;
+  height: 500px;
+  margin: 0 auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+}
+
 /* Local Hub Tables */
 .hub-locations {
-  margin: 2rem 0;
+  margin: 0;
+  padding-bottom: -2rem !important;
 }
 
 .continent-section {
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
 .continent-section h3 {
@@ -479,6 +501,22 @@ footer .social-links a:hover {
   color: var(--primary-color);
 }
 
+/* Map tooltip styling */
+.hub-tooltip {
+  font-size: 14px;
+  line-height: 1.4;
+  padding: 8px 12px;
+  white-space: nowrap;
+  width: auto;
+  max-width: 250px;
+  text-align: center;
+}
+
+.hub-tooltip strong {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
 /* Responsive Design */
 /* Tablet design */
 @media (max-width: 1024px) {
@@ -667,17 +705,4 @@ footer .social-links a:hover {
   .hub-organiser-card .hub-affiliation {
     font-size: 0.9rem;
   }
-}
-
-/* Map tooltip styling */
-.hub-tooltip {
-  font-size: 14px;
-  line-height: 1.4;
-  padding: 8px 12px;
-  white-space: normal;
-  max-width: 300px;
-}
-
-.hub-tooltip strong {
-  color: var(--primary-color);
 }
