@@ -1,5 +1,6 @@
 /* Variables for consistent theming */
 :root {
+  --light-blue: #87CEEB;
   --primary-color: #007bff;
   --secondary-color: #0056b3;
   --background-color: #f9f9f9;
@@ -85,7 +86,7 @@ nav .nav-links a {
 }
 
 nav .nav-links a:hover {
-  color: var(--primary-color);
+  color: var(--light-blue);
 }
 
 nav .mobile-menu-btn {
