@@ -1,0 +1,1 @@
+Maxime Di Folco is a Post-doctoral researcher at the Institute of Machine Learning for Biomedical Imaging at Helmholtz Munich. His research focuses on representation learning methods that aim to acquire low-dimensional representations of high-dimensional data, with a strong emphasis on cardiac imaging applications and multimodal integration.
