@@ -8,6 +8,7 @@ const hubLocations = [
     lng: 18.4241,
     contact: "Dr Catherine Namayega",
     address: "University of Cape Town",
+    region: "Africa"
   },
   {
     city: "Cairo",
@@ -16,6 +17,7 @@ const hubLocations = [
     lng: 31.2357,
     contact: "Prof. Aya Yassin",
     address: "Ain Shams University",
+    region: "MENA"
   },
   {
     city: "Lagos",
@@ -25,6 +27,7 @@ const hubLocations = [
     contact: "Charity Umoren",
     address:
       "Medical Artificial Intelligence (MAI) Lab, 120/124 Ikorodu Road Igbobi, Lagos, Nigeria",
+    region: "Africa"
   },
 
   // Americas
@@ -35,6 +38,7 @@ const hubLocations = [
     lng: -77.0428,
     contact: "Pedro Shiguihara",
     address: "Universidad San Ignacio de Loyola",
+    region: "Americas"
   },
   {
     city: "Guatemala City",
@@ -43,6 +47,7 @@ const hubLocations = [
     lng: -90.5069,
     contact: "Andrea",
     address: "Universidad Galileo",
+    region: "Americas"
   },
 
   // Asia
@@ -52,7 +57,8 @@ const hubLocations = [
     lat: 31.5497,
     lng: 74.3436,
     contact: "Waqas Sultani, Arif Mahmood and Mohsen Ali",
-    address: "Information Technology",
+    address: "Information Technology University",
+    region: "MENA"
   },
   {
     city: "Khyber Pakhtunkhwa",
@@ -62,6 +68,7 @@ const hubLocations = [
     contact: "Khurram Jadoon",
     address:
       "Ghulam Ishaq Khan Institute of Engineering Sciences and Technology",
+    region: "MENA"
   },
   {
     city: "Al-Seeb",
@@ -70,6 +77,7 @@ const hubLocations = [
     lng: 58.1829,
     contact: "Fatma Al Raisi",
     address: "Sultan Qaboos University",
+    region: "MENA"
   },
   {
     city: "Hanoi",
@@ -78,17 +86,45 @@ const hubLocations = [
     lng: 105.8342,
     contact: "Dr. Hieu Pham",
     address: "VinUniversity",
+    region: "Asia"
   },
 
-  // Middle East
+  // Middle East (MENA)
   {
     city: "Damascus",
     country: "Syria",
     lat: 33.5138,
     lng: 36.2765,
-    contact: "Oumayma Dakkak, Nada Ghneim, Riad Sonbol",
-    address:
-      "HIAST, Arab International University, Syrian Private University, & Damascus University",
+    contact: "Oumayma Dakkak",
+    address: "HIAST (Higher Institute for Applied Sciences and Technology)",
+    region: "MENA"
+  },
+  {
+    city: "Damascus",
+    country: "Syria",
+    lat: 33.5138,
+    lng: 36.2765,
+    contact: "Nada Ghneim",
+    address: "Arab International University",
+    region: "MENA"
+  },
+  {
+    city: "Damascus",
+    country: "Syria",
+    lat: 33.5138,
+    lng: 36.2765,
+    contact: "Riad Sonbol",
+    address: "Syrian Private University",
+    region: "MENA"
+  },
+  {
+    city: "Damascus",
+    country: "Syria",
+    lat: 33.5138,
+    lng: 36.2765,
+    contact: "Nada Ghneim",
+    address: "Damascus University",
+    region: "MENA"
   },
   {
     city: "Amman",
@@ -97,6 +133,7 @@ const hubLocations = [
     lng: 35.9106,
     contact: "Omar Alkadi",
     address: "University of Jordan",
+    region: "MENA"
   },
   {
     city: "Beirut",
@@ -105,7 +142,36 @@ const hubLocations = [
     lng: 35.5018,
     contact: "Razane Tajeddine and Ali Chehab",
     address: "American University of Beirut",
+    region: "MENA"
   },
+  // Additional Syria hubs
+  {
+    city: "Idlib",
+    country: "Syria",
+    lat: 35.9306,
+    lng: 36.6339,
+    contact: "Mohammad AlObaid",
+    address: "Idlib University",
+    region: "MENA"
+  },
+  {
+    city: "Azaz",
+    country: "Syria",
+    lat: 36.5861,
+    lng: 37.0444,
+    contact: "Mahmoud Musaa",
+    address: "Free Aleppo University",
+    region: "MENA"
+  },
+  {
+    city: "Syria",
+    country: "Syria",
+    lat: 33.5138,
+    lng: 36.2765,
+    contact: "Hanadi Omaish",
+    address: "Sham University",
+    region: "MENA"
+  }
 ];
 
 let markers = [];
@@ -141,8 +207,8 @@ function initializeHubMap() {
     noWrap: true,
   }).addTo(map);
 
-  // Custom marker icon
-  const markerIcon = L.icon({
+  // Custom marker icons for different regions
+  const blueIcon = L.icon({
     iconUrl:
       "https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-blue.png",
     shadowUrl:
@@ -153,12 +219,26 @@ function initializeHubMap() {
     shadowSize: [41, 41],
   });
 
+  const redIcon = L.icon({
+    iconUrl:
+      "https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-red.png",
+    shadowUrl:
+      "https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png",
+    iconSize: [25, 41],
+    iconAnchor: [12, 41],
+    popupAnchor: [1, -34],
+    shadowSize: [41, 41],
+  });
+
   // Add markers for each hub location
   hubLocations.forEach((location) => {
-    // Build tooltip content
-    let tooltipContent = `<strong>${location.city}, ${location.country}</strong>`;
+    // Choose icon based on region
+    const icon = location.region === "MENA" ? redIcon : blueIcon;
 
-    const marker = L.marker([location.lat, location.lng], { icon: markerIcon })
+    // Build tooltip content
+    let tooltipContent = `<strong>${location.city}, ${location.country}</strong><br>${location.address}`;
+
+    const marker = L.marker([location.lat, location.lng], { icon: icon })
       .addTo(map)
       .bindTooltip(tooltipContent, {
         permanent: false,
@@ -169,6 +249,25 @@ function initializeHubMap() {
 
     markers.push(marker);
   });
+
+  // Add legend to the map
+  const legend = L.control({ position: 'topright' });
+  legend.onAdd = function(map) {
+    const div = L.DomUtil.create('div', 'map-legend');
+    div.innerHTML = `
+      <h4>Hub Regions</h4>
+      <div class="legend-item">
+        <div class="legend-color mena" style="width: 20px; height: 20px; background-color: #dc3545; border-radius: 3px; flex-shrink: 0;"></div>
+        <div class="legend-text">MENA</div>
+      </div>
+      <div class="legend-item">
+        <div class="legend-color other" style="width: 20px; height: 20px; background-color: #007bff; border-radius: 3px; flex-shrink: 0;"></div>
+        <div class="legend-text">Other Regions</div>
+      </div>
+    `;
+    return div;
+  };
+  legend.addTo(map);
 
   // Fit map to show all markers
   const bounds = L.latLngBounds(hubLocations.map((loc) => [loc.lat, loc.lng]));
